@@ -1,10 +1,9 @@
-
 import { Link } from "react-router-dom";
-import { ArrowLeft, Briefcase, Award, Target, Users, Sun, Moon } from "lucide-react";
+import { ArrowRight, Calendar, MapPin, Briefcase, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Switch } from "@/components/ui/switch";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useState, useEffect } from "react";
+import Navigation from "@/components/Navigation";
 
 const About = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -19,150 +18,134 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-white dark:from-black dark:via-gray-900 dark:to-black transition-all duration-500">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-white/20 dark:bg-black/20 backdrop-blur-md border-b border-blue-500/20 dark:border-white/10">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Rahul Achre</h1>
-            <div className="flex items-center space-x-8">
-              <div className="hidden md:flex space-x-8">
-                <Link to="/" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Home</Link>
-                <Link to="/about" className="text-blue-600 dark:text-blue-400">About</Link>
-                <Link to="/skills" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Skills</Link>
-                <Link to="/education" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Education</Link>
-                <Link to="/contact" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Contact</Link>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Sun className="h-4 w-4 text-gray-900 dark:text-white" />
-                <Switch checked={darkMode} onCheckedChange={setDarkMode} />
-                <Moon className="h-4 w-4 text-gray-900 dark:text-white" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
 
-      <div className="pt-32 pb-20 px-6">
-        <div className="container mx-auto max-w-6xl">
-          <Button variant="ghost" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 mb-8">
-            <Link to="/" className="flex items-center">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
-            </Link>
-          </Button>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div className="space-y-8 animate-fade-in">
-              <div>
-                <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6 drop-shadow-[0_0_20px_rgba(59,130,246,0.5)]">
-                  About
-                  <span className="block text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 bg-clip-text drop-shadow-[0_0_20px_rgba(59,130,246,0.8)]">
-                    Rahul Achre
-                  </span>
-                </h1>
-                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                  I am a dedicated Finance Manager with 7 years of comprehensive experience at 
-                  Pyramid Group of Companies. Based in Nagpur, Maharashtra, I specialize in 
-                  financial management, accounting, and data administration with a strong focus 
-                  on customer relations and business growth.
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">My Expertise</h3>
-                <div className="grid grid-cols-1 gap-4">
-                  <Card className="p-6 bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-blue-500/30 dark:border-white/20 hover:scale-105 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.4)]">
-                    <div className="flex items-start space-x-4">
-                      <Briefcase className="w-8 h-8 text-blue-600 dark:text-blue-400 mt-1 drop-shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
-                      <div>
-                        <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Financial Management</h4>
-                        <p className="text-gray-700 dark:text-gray-300">
-                          Expert in accounting, budgeting, and financial planning with 7+ years 
-                          of hands-on experience in corporate finance.
-                        </p>
-                      </div>
+      <section className="pt-32 pb-20 px-6">
+        <div className="container mx-auto">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+              <div className="space-y-8">
+                <div>
+                  <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6 drop-shadow-[0_0_20px_rgba(59,130,246,0.5)]">
+                    About <span className="text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 bg-clip-text">Rahul Achre</span>
+                  </h1>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+                    A dedicated Finance Manager with over 7 years of experience at Pyramid Group of Companies. 
+                    I specialize in financial documentation, accounting processes, and data management while 
+                    maintaining strong customer relationships.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="flex items-center text-gray-700 dark:text-gray-300">
+                      <Calendar className="w-5 h-5 mr-2 text-blue-600 dark:text-blue-400" />
+                      <span>7+ Years Experience</span>
                     </div>
-                  </Card>
-
-                  <Card className="p-6 bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-blue-500/30 dark:border-white/20 hover:scale-105 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.4)]">
-                    <div className="flex items-start space-x-4">
-                      <Users className="w-8 h-8 text-blue-600 dark:text-blue-400 mt-1 drop-shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
-                      <div>
-                        <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Customer Relations</h4>
-                        <p className="text-gray-700 dark:text-gray-300">
-                          Skilled in customer handling, guidance, and building long-term 
-                          business relationships for sustainable growth.
-                        </p>
-                      </div>
+                    <div className="flex items-center text-gray-700 dark:text-gray-300">
+                      <MapPin className="w-5 h-5 mr-2 text-blue-600 dark:text-blue-400" />
+                      <span>Nagpur, Maharashtra</span>
                     </div>
-                  </Card>
-
-                  <Card className="p-6 bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-blue-500/30 dark:border-white/20 hover:scale-105 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.4)]">
-                    <div className="flex items-start space-x-4">
-                      <Target className="w-8 h-8 text-blue-600 dark:text-blue-400 mt-1 drop-shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
-                      <div>
-                        <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Data Management</h4>
-                        <p className="text-gray-700 dark:text-gray-300">
-                          Proficient in database management, documentation, and registry 
-                          systems for efficient business operations.
-                        </p>
-                      </div>
+                    <div className="flex items-center text-gray-700 dark:text-gray-300">
+                      <Briefcase className="w-5 h-5 mr-2 text-blue-600 dark:text-blue-400" />
+                      <span>Finance Manager</span>
                     </div>
-                  </Card>
+                    <div className="flex items-center text-gray-700 dark:text-gray-300">
+                      <GraduationCap className="w-5 h-5 mr-2 text-blue-600 dark:text-blue-400" />
+                      <span>Professional Finance</span>
+                    </div>
+                  </div>
                 </div>
+                
+                <Button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] transition-all duration-300">
+                  <Link to="/contact" className="flex items-center">
+                    Get In Touch <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </Button>
               </div>
-            </div>
 
-            <div className="space-y-8 animate-scale-in">
               <div className="relative">
-                <div className="w-full h-96 relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 rounded-2xl blur-xl opacity-30 animate-pulse shadow-[0_0_60px_rgba(59,130,246,0.6)]"></div>
+                <div className="w-80 h-80 mx-auto relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 rounded-full blur-xl opacity-40 animate-pulse shadow-[0_0_60px_rgba(59,130,246,0.6)]"></div>
                   <img 
                     src="/lovable-uploads/e5b00213-99b9-4b57-8c71-b5fcd8e8ee5a.png"
-                    alt="Rahul Achre - Professional"
-                    className="relative w-full h-full object-cover rounded-2xl border-4 border-blue-500/40 dark:border-white/20 shadow-2xl shadow-[0_0_40px_rgba(59,130,246,0.4)]"
+                    alt="Rahul Achre"
+                    className="relative w-full h-full object-cover rounded-full border-4 border-blue-400/40 shadow-2xl hover:scale-105 transition-transform duration-300 shadow-[0_0_40px_rgba(59,130,246,0.4)]"
                   />
                 </div>
               </div>
+            </div>
 
-              <Card className="p-6 bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-blue-500/30 dark:border-white/20 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Quick Facts</h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span className="text-gray-700 dark:text-gray-300">Experience:</span>
-                    <span className="text-gray-900 dark:text-white font-semibold">7+ Years</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-700 dark:text-gray-300">Company:</span>
-                    <span className="text-gray-900 dark:text-white font-semibold">Pyramid Group</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-700 dark:text-gray-300">Location:</span>
-                    <span className="text-gray-900 dark:text-white font-semibold">Nagpur, Maharashtra</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-700 dark:text-gray-300">Specialization:</span>
-                    <span className="text-gray-900 dark:text-white font-semibold">Finance Management</span>
-                  </div>
-                </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+              <Card className="bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-blue-500/30 hover:scale-105 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.4)]">
+                <CardHeader>
+                  <CardTitle className="text-gray-900 dark:text-white flex items-center">
+                    <Briefcase className="w-6 h-6 mr-2 text-blue-600 dark:text-blue-400" />
+                    Experience
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 dark:text-gray-300">
+                    Over 7 years of dedicated service at Pyramid Group of Companies, 
+                    handling diverse financial responsibilities and client relationships.
+                  </p>
+                </CardContent>
               </Card>
+
+              <Card className="bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-blue-500/30 hover:scale-105 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.4)]">
+                <CardHeader>
+                  <CardTitle className="text-gray-900 dark:text-white flex items-center">
+                    <GraduationCap className="w-6 h-6 mr-2 text-blue-600 dark:text-blue-400" />
+                    Expertise
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 dark:text-gray-300">
+                    Specialized in accounting, financial documentation, data management, 
+                    and maintaining strong customer relationships.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-blue-500/30 hover:scale-105 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.4)]">
+                <CardHeader>
+                  <CardTitle className="text-gray-900 dark:text-white flex items-center">
+                    <MapPin className="w-6 h-6 mr-2 text-blue-600 dark:text-blue-400" />
+                    Location
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 dark:text-gray-300">
+                    Based in Nagpur, Maharashtra, bringing local market knowledge 
+                    and cultural understanding to business operations.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">My Values</h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Integrity</h3>
+                  <p className="text-gray-700 dark:text-gray-300">
+                    Maintaining the highest standards of honesty and transparency in all financial dealings.
+                  </p>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Excellence</h3>
+                  <p className="text-gray-700 dark:text-gray-300">
+                    Continuously striving for perfection in financial management and customer service.
+                  </p>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Innovation</h3>
+                  <p className="text-gray-700 dark:text-gray-300">
+                    Embracing new technologies and methodologies to improve financial processes.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Contact Footer */}
-      <footer className="py-12 px-6 border-t border-blue-500/20 dark:border-white/10">
-        <div className="container mx-auto">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">Ready to Work Together?</h3>
-            <p className="text-gray-700 dark:text-gray-300 mb-6">Let's discuss how I can contribute to your financial success</p>
-            <Button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] transition-all duration-300">
-              <Link to="/contact">Get In Touch</Link>
-            </Button>
-          </div>
-        </div>
-      </footer>
+      </section>
     </div>
   );
 };

@@ -1,10 +1,9 @@
-
 import { Link } from "react-router-dom";
-import { ArrowRight, Download, Mail, Phone, MapPin, Sun, Moon } from "lucide-react";
+import { ArrowRight, Download, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Switch } from "@/components/ui/switch";
 import { useState, useEffect } from "react";
+import Navigation from "@/components/Navigation";
 
 const Index = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -19,28 +18,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-white dark:from-black dark:via-gray-900 dark:to-black transition-all duration-500">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-white/30 dark:bg-black/30 backdrop-blur-md border-b border-blue-500/20">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white drop-shadow-lg">Rahul Achre</h1>
-            <div className="flex items-center space-x-8">
-              <div className="hidden md:flex space-x-8">
-                <Link to="/" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Home</Link>
-                <Link to="/about" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">About</Link>
-                <Link to="/skills" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Skills</Link>
-                <Link to="/education" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Education</Link>
-                <Link to="/contact" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Contact</Link>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Sun className="h-4 w-4 text-gray-900 dark:text-white" />
-                <Switch checked={darkMode} onCheckedChange={setDarkMode} />
-                <Moon className="h-4 w-4 text-gray-900 dark:text-white" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
@@ -101,7 +79,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Quick About Section */}
       <section className="py-20 px-6">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
@@ -118,7 +95,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Footer */}
       <footer className="py-12 px-6 border-t border-blue-500/20">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
