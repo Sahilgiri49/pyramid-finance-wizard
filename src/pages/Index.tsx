@@ -18,12 +18,12 @@ const Index = () => {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-white dark:from-gray-900 dark:via-blue-900 dark:to-black transition-all duration-500">
+    <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-white dark:from-black dark:via-gray-900 dark:to-black transition-all duration-500">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-white/30 dark:bg-black/30 backdrop-blur-md border-b border-blue-500/20">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white drop-shadow-lg">Rahul Aachre</h1>
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-white drop-shadow-lg">Rahul Achre</h1>
             <div className="flex items-center space-x-8">
               <div className="hidden md:flex space-x-8">
                 <Link to="/" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Home</Link>
@@ -92,7 +92,7 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 rounded-full blur-xl opacity-40 animate-pulse shadow-[0_0_60px_rgba(59,130,246,0.6)]"></div>
                 <img 
                   src="/lovable-uploads/e5b00213-99b9-4b57-8c71-b5fcd8e8ee5a.png"
-                  alt="Rahul Aachre"
+                  alt="Rahul Achre"
                   className="relative w-full h-full object-cover rounded-full border-4 border-blue-400/40 shadow-2xl hover:scale-105 transition-transform duration-300 shadow-[0_0_40px_rgba(59,130,246,0.4)]"
                 />
               </div>

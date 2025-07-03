@@ -49,19 +49,19 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-white dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 transition-all duration-500">
+    <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-white dark:from-black dark:via-gray-900 dark:to-black transition-all duration-500">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-white/20 dark:bg-black/20 backdrop-blur-md border-b border-blue-500/20 dark:border-white/10">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Rahul Aachre</h1>
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Rahul Achre</h1>
             <div className="flex items-center space-x-8">
               <div className="hidden md:flex space-x-8">
-                <Link to="/" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-purple-400 transition-colors">Home</Link>
-                <Link to="/about" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-purple-400 transition-colors">About</Link>
-                <Link to="/skills" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-purple-400 transition-colors">Skills</Link>
-                <Link to="/education" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-purple-400 transition-colors">Education</Link>
-                <Link to="/contact" className="text-blue-600 dark:text-purple-400">Contact</Link>
+                <Link to="/" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Home</Link>
+                <Link to="/about" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">About</Link>
+                <Link to="/skills" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Skills</Link>
+                <Link to="/education" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Education</Link>
+                <Link to="/contact" className="text-blue-600 dark:text-blue-400">Contact</Link>
               </div>
               <div className="flex items-center space-x-2">
                 <Sun className="h-4 w-4 text-gray-900 dark:text-white" />
@@ -75,7 +75,7 @@ const Contact = () => {
 
       <div className="pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-6xl">
-          <Button variant="ghost" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-purple-400 mb-8">
+          <Button variant="ghost" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 mb-8">
             <Link to="/" className="flex items-center">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
@@ -83,9 +83,9 @@ const Contact = () => {
           </Button>
 
           <div className="text-center mb-16 animate-fade-in">
-            <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6 drop-shadow-[0_0_20px_rgba(59,130,246,0.5)]">
               Get In
-              <span className="block text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text">
+              <span className="block text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 bg-clip-text drop-shadow-[0_0_20px_rgba(59,130,246,0.8)]">
                 Touch
               </span>
             </h1>
@@ -98,11 +98,11 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-8 animate-scale-in">
-              <Card className="p-8 bg-white/60 dark:bg-white/10 backdrop-blur-sm border-blue-500/30 dark:border-white/20">
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Contact Information</h2>
+              <Card className="p-8 bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-blue-500/30 dark:border-white/20 shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.4)] transition-shadow">
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">Contact Information</h2>
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-purple-600 dark:to-pink-600 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(59,130,246,0.4)]">
                       <Mail className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -112,7 +112,7 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-purple-600 dark:to-pink-600 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(59,130,246,0.4)]">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -122,7 +122,7 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-purple-600 dark:to-pink-600 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(59,130,246,0.4)]">
                       <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -133,14 +133,14 @@ const Contact = () => {
                 </div>
               </Card>
 
-              <Card className="p-6 bg-white/60 dark:bg-white/10 backdrop-blur-sm border-blue-500/30 dark:border-white/20">
+              <Card className="p-6 bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-blue-500/30 dark:border-white/20 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Professional Summary</h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
                   Finance Manager with 7+ years at Pyramid Group of Companies, specializing in:
                 </p>
                 <div className="grid grid-cols-2 gap-2">
                   {["Financial Planning", "Customer Relations", "Data Management", "Time Management", "Accounting", "Documentation"].map((skill, index) => (
-                    <div key={index} className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 dark:from-purple-600/20 dark:to-pink-600/20 rounded-lg p-2 text-center">
+                    <div key={index} className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 dark:from-blue-600/20 dark:to-cyan-600/20 rounded-lg p-2 text-center">
                       <span className="text-gray-900 dark:text-white text-sm">{skill}</span>
                     </div>
                   ))}
@@ -150,8 +150,8 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="animate-scale-in">
-              <Card className="p-8 bg-white/60 dark:bg-white/10 backdrop-blur-sm border-blue-500/30 dark:border-white/20">
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Send a Message</h2>
+              <Card className="p-8 bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-blue-500/30 dark:border-white/20 shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.4)] transition-shadow">
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">Send a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-gray-900 dark:text-white font-semibold mb-2">
@@ -203,7 +203,7 @@ const Contact = () => {
 
                   <Button 
                     type="submit" 
-                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-purple-600 dark:to-pink-600 hover:from-blue-700 hover:to-cyan-700 dark:hover:from-purple-700 dark:hover:to-pink-700"
+                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] transition-all duration-300"
                   >
                     <Send className="w-4 h-4 mr-2" />
                     Send Message
@@ -215,8 +215,8 @@ const Contact = () => {
 
           {/* Call to Action */}
           <div className="mt-16 text-center animate-fade-in">
-            <Card className="p-8 bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-purple-600/10 dark:to-pink-600/10 backdrop-blur-sm border-blue-500/30 dark:border-white/20">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Ready to Work Together?</h3>
+            <Card className="p-8 bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-600/10 dark:to-cyan-600/10 backdrop-blur-sm border-blue-500/30 dark:border-white/20 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">Ready to Work Together?</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
                 I'm always open to discussing new opportunities in finance management, 
                 consulting projects, or collaboration opportunities. Let's connect and 
@@ -225,12 +225,12 @@ const Contact = () => {
               <div className="flex justify-center space-x-4">
                 <Button 
                   onClick={handleEmailMe}
-                  className="bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-purple-600 dark:to-pink-600 hover:from-blue-700 hover:to-cyan-700 dark:hover:from-purple-700 dark:hover:to-pink-700"
+                  className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] transition-all duration-300"
                 >
                   <Mail className="w-4 h-4 mr-2" />
                   Email Me
                 </Button>
-                <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white dark:border-purple-400 dark:text-purple-400 dark:hover:bg-purple-400 dark:hover:text-white">
+                <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-white shadow-[0_0_15px_rgba(59,130,246,0.3)] hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] transition-all duration-300">
                   Download Resume
                 </Button>
               </div>

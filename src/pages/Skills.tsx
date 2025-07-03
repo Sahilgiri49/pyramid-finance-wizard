@@ -41,19 +41,19 @@ const Skills = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-white dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 transition-all duration-500">
+    <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-white dark:from-black dark:via-gray-900 dark:to-black transition-all duration-500">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-white/20 dark:bg-black/20 backdrop-blur-md border-b border-blue-500/20 dark:border-white/10">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Rahul Aachre</h1>
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Rahul Achre</h1>
             <div className="flex items-center space-x-8">
               <div className="hidden md:flex space-x-8">
-                <Link to="/" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-purple-400 transition-colors">Home</Link>
-                <Link to="/about" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-purple-400 transition-colors">About</Link>
-                <Link to="/skills" className="text-blue-600 dark:text-purple-400">Skills</Link>
-                <Link to="/education" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-purple-400 transition-colors">Education</Link>
-                <Link to="/contact" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-purple-400 transition-colors">Contact</Link>
+                <Link to="/" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Home</Link>
+                <Link to="/about" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">About</Link>
+                <Link to="/skills" className="text-blue-600 dark:text-blue-400">Skills</Link>
+                <Link to="/education" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Education</Link>
+                <Link to="/contact" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Contact</Link>
               </div>
               <div className="flex items-center space-x-2">
                 <Sun className="h-4 w-4 text-gray-900 dark:text-white" />
@@ -67,7 +67,7 @@ const Skills = () => {
 
       <div className="pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-6xl">
-          <Button variant="ghost" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-purple-400 mb-8">
+          <Button variant="ghost" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 mb-8">
             <Link to="/" className="flex items-center">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
@@ -75,9 +75,9 @@ const Skills = () => {
           </Button>
 
           <div className="text-center mb-16 animate-fade-in">
-            <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6 drop-shadow-[0_0_20px_rgba(59,130,246,0.5)]">
               My
-              <span className="block text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text">
+              <span className="block text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 bg-clip-text drop-shadow-[0_0_20px_rgba(59,130,246,0.8)]">
                 Skills
               </span>
             </h1>
@@ -90,8 +90,8 @@ const Skills = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Technical Skills */}
             <div className="space-y-8 animate-scale-in">
-              <Card className="p-8 bg-white/60 dark:bg-white/10 backdrop-blur-sm border-blue-500/30 dark:border-white/20">
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+              <Card className="p-8 bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-blue-500/30 dark:border-white/20 shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.4)] transition-shadow">
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">
                   Technical Skills
                 </h2>
                 <div className="space-y-6">
@@ -106,10 +106,10 @@ const Skills = () => {
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center space-x-3">
-                            <IconComponent className="w-6 h-6 text-blue-600 dark:text-purple-400" />
+                            <IconComponent className="w-6 h-6 text-blue-600 dark:text-blue-400 drop-shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
                             <span className="text-gray-900 dark:text-white font-semibold">{skill.name}</span>
                           </div>
-                          <span className="text-blue-600 dark:text-purple-400 font-bold">{skill.level}%</span>
+                          <span className="text-blue-600 dark:text-blue-400 font-bold">{skill.level}%</span>
                         </div>
                         <div className="relative">
                           <Progress 
@@ -123,13 +123,13 @@ const Skills = () => {
                 </div>
               </Card>
 
-              <Card className="p-6 bg-white/60 dark:bg-white/10 backdrop-blur-sm border-blue-500/30 dark:border-white/20">
+              <Card className="p-6 bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-blue-500/30 dark:border-white/20 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Core Competencies</h3>
                 <div className="grid grid-cols-2 gap-3">
                   {["Financial Reporting", "Budget Planning", "Risk Assessment", "Compliance", "Data Analysis", "Process Optimization"].map((competency, index) => (
                     <div 
                       key={index} 
-                      className={`bg-gradient-to-r from-blue-600/20 to-cyan-600/20 dark:from-purple-600/20 dark:to-pink-600/20 rounded-lg p-3 text-center transform transition-all duration-500 delay-${index * 100} ${
+                      className={`bg-gradient-to-r from-blue-600/20 to-cyan-600/20 dark:from-blue-600/20 dark:to-cyan-600/20 rounded-lg p-3 text-center transform transition-all duration-500 delay-${index * 100} ${
                         animateSkills ? 'scale-100 opacity-100' : 'scale-75 opacity-0'
                       }`}
                     >
@@ -142,8 +142,8 @@ const Skills = () => {
 
             {/* Soft Skills */}
             <div className="space-y-8 animate-scale-in">
-              <Card className="p-8 bg-white/60 dark:bg-white/10 backdrop-blur-sm border-blue-500/30 dark:border-white/20">
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+              <Card className="p-8 bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-blue-500/30 dark:border-white/20 shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.4)] transition-shadow">
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">
                   Soft Skills
                 </h2>
                 <div className="space-y-6">
@@ -158,10 +158,10 @@ const Skills = () => {
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center space-x-3">
-                            <IconComponent className="w-6 h-6 text-cyan-600 dark:text-pink-400" />
+                            <IconComponent className="w-6 h-6 text-cyan-600 dark:text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]" />
                             <span className="text-gray-900 dark:text-white font-semibold">{skill.name}</span>
                           </div>
-                          <span className="text-cyan-600 dark:text-pink-400 font-bold">{skill.level}%</span>
+                          <span className="text-cyan-600 dark:text-cyan-400 font-bold">{skill.level}%</span>
                         </div>
                         <div className="relative">
                           <Progress 
@@ -175,7 +175,7 @@ const Skills = () => {
                 </div>
               </Card>
 
-              <Card className="p-6 bg-white/60 dark:bg-white/10 backdrop-blur-sm border-blue-500/30 dark:border-white/20">
+              <Card className="p-6 bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-blue-500/30 dark:border-white/20 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Professional Achievements</h3>
                 <div className="space-y-4">
                   {[
@@ -190,7 +190,7 @@ const Skills = () => {
                         animateSkills ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'
                       }`}
                     >
-                      <div className="w-2 h-2 bg-blue-600 dark:bg-purple-400 rounded-full mt-2"></div>
+                      <div className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mt-2"></div>
                       <p className="text-gray-700 dark:text-gray-300">{achievement}</p>
                     </div>
                   ))}
@@ -205,9 +205,9 @@ const Skills = () => {
       <footer className="py-12 px-6 border-t border-blue-500/20 dark:border-white/10">
         <div className="container mx-auto">
           <div className="text-center">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Impressed by My Skills?</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">Impressed by My Skills?</h3>
             <p className="text-gray-700 dark:text-gray-300 mb-6">Let's discuss how I can bring value to your organization</p>
-            <Button className="bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-purple-600 dark:to-pink-600 hover:from-blue-700 hover:to-cyan-700 dark:hover:from-purple-700 dark:hover:to-pink-700">
+            <Button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] transition-all duration-300">
               <Link to="/contact">Contact Me</Link>
             </Button>
           </div>

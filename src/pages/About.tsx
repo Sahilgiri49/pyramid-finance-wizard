@@ -18,19 +18,19 @@ const About = () => {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-white dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 transition-all duration-500">
+    <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-white dark:from-black dark:via-gray-900 dark:to-black transition-all duration-500">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-white/20 dark:bg-black/20 backdrop-blur-md border-b border-blue-500/20 dark:border-white/10">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Rahul Aachre</h1>
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Rahul Achre</h1>
             <div className="flex items-center space-x-8">
               <div className="hidden md:flex space-x-8">
-                <Link to="/" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-purple-400 transition-colors">Home</Link>
-                <Link to="/about" className="text-blue-600 dark:text-purple-400">About</Link>
-                <Link to="/skills" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-purple-400 transition-colors">Skills</Link>
-                <Link to="/education" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-purple-400 transition-colors">Education</Link>
-                <Link to="/contact" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-purple-400 transition-colors">Contact</Link>
+                <Link to="/" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Home</Link>
+                <Link to="/about" className="text-blue-600 dark:text-blue-400">About</Link>
+                <Link to="/skills" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Skills</Link>
+                <Link to="/education" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Education</Link>
+                <Link to="/contact" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Contact</Link>
               </div>
               <div className="flex items-center space-x-2">
                 <Sun className="h-4 w-4 text-gray-900 dark:text-white" />
@@ -44,7 +44,7 @@ const About = () => {
 
       <div className="pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-6xl">
-          <Button variant="ghost" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-purple-400 mb-8">
+          <Button variant="ghost" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 mb-8">
             <Link to="/" className="flex items-center">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
@@ -54,10 +54,10 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-8 animate-fade-in">
               <div>
-                <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6 drop-shadow-[0_0_20px_rgba(59,130,246,0.5)]">
                   About
-                  <span className="block text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text">
-                    Rahul Aachre
+                  <span className="block text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 bg-clip-text drop-shadow-[0_0_20px_rgba(59,130,246,0.8)]">
+                    Rahul Achre
                   </span>
                 </h1>
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -69,11 +69,11 @@ const About = () => {
               </div>
 
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">My Expertise</h3>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">My Expertise</h3>
                 <div className="grid grid-cols-1 gap-4">
-                  <Card className="p-6 bg-white/60 dark:bg-white/10 backdrop-blur-sm border-blue-500/30 dark:border-white/20 hover:scale-105 transition-transform">
+                  <Card className="p-6 bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-blue-500/30 dark:border-white/20 hover:scale-105 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.4)]">
                     <div className="flex items-start space-x-4">
-                      <Briefcase className="w-8 h-8 text-blue-600 dark:text-purple-400 mt-1" />
+                      <Briefcase className="w-8 h-8 text-blue-600 dark:text-blue-400 mt-1 drop-shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
                       <div>
                         <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Financial Management</h4>
                         <p className="text-gray-700 dark:text-gray-300">
@@ -84,9 +84,9 @@ const About = () => {
                     </div>
                   </Card>
 
-                  <Card className="p-6 bg-white/60 dark:bg-white/10 backdrop-blur-sm border-blue-500/30 dark:border-white/20 hover:scale-105 transition-transform">
+                  <Card className="p-6 bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-blue-500/30 dark:border-white/20 hover:scale-105 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.4)]">
                     <div className="flex items-start space-x-4">
-                      <Users className="w-8 h-8 text-blue-600 dark:text-purple-400 mt-1" />
+                      <Users className="w-8 h-8 text-blue-600 dark:text-blue-400 mt-1 drop-shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
                       <div>
                         <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Customer Relations</h4>
                         <p className="text-gray-700 dark:text-gray-300">
@@ -97,9 +97,9 @@ const About = () => {
                     </div>
                   </Card>
 
-                  <Card className="p-6 bg-white/60 dark:bg-white/10 backdrop-blur-sm border-blue-500/30 dark:border-white/20 hover:scale-105 transition-transform">
+                  <Card className="p-6 bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-blue-500/30 dark:border-white/20 hover:scale-105 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.4)]">
                     <div className="flex items-start space-x-4">
-                      <Target className="w-8 h-8 text-blue-600 dark:text-purple-400 mt-1" />
+                      <Target className="w-8 h-8 text-blue-600 dark:text-blue-400 mt-1 drop-shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
                       <div>
                         <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Data Management</h4>
                         <p className="text-gray-700 dark:text-gray-300">
@@ -116,16 +116,16 @@ const About = () => {
             <div className="space-y-8 animate-scale-in">
               <div className="relative">
                 <div className="w-full h-96 relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-purple-400 dark:to-pink-400 rounded-2xl blur-xl opacity-30 animate-pulse"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 rounded-2xl blur-xl opacity-30 animate-pulse shadow-[0_0_60px_rgba(59,130,246,0.6)]"></div>
                   <img 
                     src="/lovable-uploads/e5b00213-99b9-4b57-8c71-b5fcd8e8ee5a.png"
-                    alt="Rahul Aachre - Professional"
-                    className="relative w-full h-full object-cover rounded-2xl border-4 border-blue-500/40 dark:border-white/20 shadow-2xl"
+                    alt="Rahul Achre - Professional"
+                    className="relative w-full h-full object-cover rounded-2xl border-4 border-blue-500/40 dark:border-white/20 shadow-2xl shadow-[0_0_40px_rgba(59,130,246,0.4)]"
                   />
                 </div>
               </div>
 
-              <Card className="p-6 bg-white/60 dark:bg-white/10 backdrop-blur-sm border-blue-500/30 dark:border-white/20">
+              <Card className="p-6 bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-blue-500/30 dark:border-white/20 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Quick Facts</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
@@ -155,9 +155,9 @@ const About = () => {
       <footer className="py-12 px-6 border-t border-blue-500/20 dark:border-white/10">
         <div className="container mx-auto">
           <div className="text-center">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Ready to Work Together?</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">Ready to Work Together?</h3>
             <p className="text-gray-700 dark:text-gray-300 mb-6">Let's discuss how I can contribute to your financial success</p>
-            <Button className="bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-purple-600 dark:to-pink-600 hover:from-blue-700 hover:to-cyan-700 dark:hover:from-purple-700 dark:hover:to-pink-700">
+            <Button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] transition-all duration-300">
               <Link to="/contact">Get In Touch</Link>
             </Button>
           </div>
